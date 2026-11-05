@@ -1,0 +1,32 @@
+# robots.txt for a business site that wants to be found by search engines and cited by AI assistants.
+# Policy agreed with the client on YYYY-MM-DD:
+#   - search engines and AI search / user-fetch bots: allowed
+#   - AI training bots: allowed (change the GPTBot, ClaudeBot, Google-Extended, Applebot-Extended
+#     and CCBot groups to "Disallow: /" to refuse training; citations are not affected)
+# A bot that has its own group ignores the * group, so shared Disallow lines are repeated below.
+
+User-agent: *
+Allow: /
+# decorative media: nothing to index, and every fetch is a billed request
+Disallow: /video/
+
+# AI search and user-requested fetches: these make citations possible
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+Allow: /
+Disallow: /video/
+
+# AI training (the client's choice)
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+Allow: /
+Disallow: /video/
+
+Sitemap: https://www.example.com/sitemap.xml

@@ -1,0 +1,12 @@
+{
+  "name": "seo-geo-vercel-skills",
+  "interface": { "displayName": "SEO, GEO & Vercel skills" },
+  "plugins": [
+    {
+      "name": "seo-geo-vercel",
+      "source": { "source": "local", "path": "./" },
+      "policy": { "installation": "AVAILABLE", "authentication": "ON_INSTALL" },
+      "category": "Productivity"
+    }
+  ]
+}

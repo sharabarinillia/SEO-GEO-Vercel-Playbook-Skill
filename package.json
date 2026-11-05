@@ -1,0 +1,22 @@
+{
+  "name": "seo-geo-vercel-skills",
+  "version": "1.0.0",
+  "description": "Agent skills for technical SEO, GEO (AI search visibility) and low-cost Vercel hosting of static and mostly static websites. Works with Claude Code, Codex, GitHub Copilot, Cursor, Gemini CLI, Windsurf, Cline, Kiro and any tool that reads the Agent Skills format.",
+  "homepage": "https://github.com/sharabarinillia/SEO-GEO-Vercel-Playbook-Skill#readme",
+  "repository": { "type": "git", "url": "git+https://github.com/sharabarinillia/SEO-GEO-Vercel-Playbook-Skill.git" },
+  "bugs": { "url": "https://github.com/sharabarinillia/SEO-GEO-Vercel-Playbook-Skill/issues" },
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "test": "node --test",
+    "validate": "node scripts/validate.mjs",
+    "sync": "node scripts/sync.mjs",
+    "check": "node scripts/sync.mjs --check && node scripts/validate.mjs && node --test",
+    "package": "node scripts/package.mjs",
+    "install-skills": "node scripts/install.mjs"
+  },
+  "keywords": ["agent-skills", "seo", "geo", "ai-search", "vercel", "structured-data", "web-performance", "claude-code", "codex", "copilot", "cursor", "gemini-cli"],
+  "author": "Illia Sharabarin"
+}

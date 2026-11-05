@@ -1,0 +1,23 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "routes": [
+    {
+      "src": "^/(?:wp-|wordpress/|xmlrpc\\.php|cgi-bin/|phpmyadmin|\\.env|\\.git|\\.svn|\\.aws|\\.ssh|\\.htaccess|\\.DS_Store)|\\.(?:php|php5|php7|phtml|asp|aspx|jsp|cgi|sql|bak|env|ini)$",
+      "mitigate": { "action": "deny" }
+    },
+    {
+      "src": "/(.*)",
+      "has": [{ "type": "host", "value": { "suf": ".vercel.app" } }],
+      "headers": { "X-Robots-Tag": "noindex" },
+      "continue": true
+    },
+    { "src": "^/old-page/?$", "status": 301, "headers": { "Location": "/new-page/" } },
+    { "src": "^/((?:[^/]+/)*)index\\.html$", "status": 308, "headers": { "Location": "/$1" } },
+    { "src": "^/((?:[^/]+/)*[^/.]+)$", "status": 308, "headers": { "Location": "/$1/" } },
+    { "src": "^/assets/(.*)$", "headers": { "cache-control": "public, max-age=31536000, immutable" }, "continue": true },
+    { "src": "^/fonts/(.*)$", "headers": { "cache-control": "public, max-age=31536000" }, "continue": true },
+    { "src": "^/(img|video|og)/(.*)$", "headers": { "cache-control": "public, max-age=2592000, stale-while-revalidate=86400" }, "continue": true },
+    { "src": "^/(logo[^/]*\\.svg|favicon\\.ico|apple-touch-icon\\.png)$", "headers": { "cache-control": "public, max-age=2592000, stale-while-revalidate=86400" }, "continue": true },
+    { "src": "^/data/(.*)$", "headers": { "cache-control": "public, max-age=86400, stale-while-revalidate=604800" }, "continue": true }
+  ]
+}

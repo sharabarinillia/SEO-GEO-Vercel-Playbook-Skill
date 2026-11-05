@@ -1,0 +1,11 @@
+{
+  "name": "seo-geo-vercel",
+  "description": "Agent skills for technical SEO, GEO (being cited by AI assistants) and low-cost Vercel hosting of static and mostly static websites: audits, metadata, structured data, migrations, AI crawlers and llms.txt, performance, Vercel costs, vercel.json and firewall. Tested scripts, no dependencies.",
+  "version": "1.0.0",
+  "author": { "name": "Illia Sharabarin", "url": "https://github.com/sharabarinillia" },
+  "license": "MIT",
+  "homepage": "https://github.com/sharabarinillia/SEO-GEO-Vercel-Playbook-Skill",
+  "repository": "https://github.com/sharabarinillia/SEO-GEO-Vercel-Playbook-Skill",
+  "keywords": ["seo", "geo", "ai-search", "llms-txt", "structured-data", "vercel", "web-performance", "site-migration"],
+  "skills": "skills/"
+}

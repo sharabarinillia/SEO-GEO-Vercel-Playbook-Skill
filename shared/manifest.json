@@ -1,0 +1,6 @@
+{
+  "_comment": "Which skills get a copy of each shared file (in their scripts/ folder). Run node scripts/sync.mjs after changing a shared file.",
+  "site-files.mjs": ["seo-technical-audit", "structured-data", "geo-ai-search", "site-migration", "vercel-static-config", "vercel-firewall"],
+  "serp-width.mjs": ["seo-technical-audit", "seo-metadata"],
+  "measure-requests.cjs": ["web-performance", "vercel-cost-optimization"]
+}

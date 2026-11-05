@@ -1,0 +1,15 @@
+{
+  "name": "seo-geo-vercel-skills",
+  "description": "SEO, GEO and Vercel hosting skills for static and mostly static websites.",
+  "owner": { "name": "Illia Sharabarin", "url": "https://github.com/sharabarinillia" },
+  "plugins": [
+    {
+      "name": "seo-geo-vercel",
+      "description": "Agent skills for technical SEO, GEO (being cited by AI assistants) and low-cost Vercel hosting of static and mostly static websites: audits, metadata, structured data, migrations, AI crawlers and llms.txt, performance, Vercel costs, vercel.json and firewall. Tested scripts, no dependencies.",
+      "source": "./",
+      "category": "development",
+      "tags": ["seo", "geo", "vercel"],
+      "skills": "skills/"
+    }
+  ]
+}

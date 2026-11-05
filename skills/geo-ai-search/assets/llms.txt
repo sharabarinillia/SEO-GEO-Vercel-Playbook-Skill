@@ -1,0 +1,29 @@
+# Brand
+
+> One paragraph: what the business does, where, since when, for whom, and its specialisms. Facts only.
+
+One or two sentences on how the business works (for example: who answers enquiries, and how quickly).
+
+- Address: Street 1, 1000 AA City, Country
+- Phone: +31 20 000 0000
+- Email (sales): sales@example.com
+- Certifications and memberships: name (certifying body), …
+- Languages: English and Dutch
+
+## Services
+
+- [Service one](https://www.example.com/services/one/): one line of facts.
+- [Service two](https://www.example.com/services/two/): one line of facts.
+
+## Tools
+
+- [Calculator](https://www.example.com/tools/calculator/): what it calculates and the rule it follows.
+
+## Company
+
+- [About](https://www.example.com/about/): history, team, certifications.
+- [Contact](https://www.example.com/contact/): address, phone, quote form.
+
+## Optional
+
+- [Dutch version](https://www.example.com/nl/): the same pages in Dutch.

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://www.example.com/</loc><lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.example.com/nl/"/></url>
+  <url><loc>https://www.example.com/about/</loc><lastmod>2026-10-01T10:00:00+01:00</lastmod></url>
+  <url><loc>https://www.example.com/gone/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://www.example.com/nl/over</loc><lastmod>yesterday</lastmod></url>
+  <url><loc>https://staging.example.com/nl/</loc></url>
+</urlset>
