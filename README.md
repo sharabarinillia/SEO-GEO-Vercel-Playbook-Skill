@@ -1,5 +1,10 @@
 # SEO, GEO & Vercel skills
 
+[![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![check](https://github.com/sharabarinillia/SEO-GEO-Vercel-Playbook-Skill/actions/workflows/ci.yml/badge.svg)](https://github.com/sharabarinillia/SEO-GEO-Vercel-Playbook-Skill/actions/workflows/ci.yml)
+![Node.js 18+](https://img.shields.io/badge/node-%E2%89%A518-339933.svg)
+![Agent Skills](https://img.shields.io/badge/format-Agent%20Skills-6f42c1.svg)
+
 Ten agent skills that help an AI coding assistant build, launch and run websites that are **fast,
 findable in search, cited by AI assistants, and cheap to host on Vercel**. Made for static and
 mostly static marketing sites (Vite, Astro, Next.js static export, plain HTML, Eleventy, Hugo),
@@ -57,12 +62,17 @@ and most can write `--json` for other tools.
 
 ## Quick start
 
-**Claude Code (plugin):**
+Needs Node.js 18 or later for the scripts. No npm packages to install.
+
+**Claude Code (plugin):** send these as two separate prompts.
 
 ```text
 /plugin marketplace add sharabarinillia/SEO-GEO-Vercel-Playbook-Skill
 /plugin install seo-geo-vercel@seo-geo-vercel-skills
 ```
+
+`seo-geo-vercel-skills` is the name of the marketplace this repository defines, and
+`seo-geo-vercel` is the plugin in it; neither is a separate repository.
 
 **Any tool, into one project (copies the skills where the tools look):**
 
@@ -89,7 +99,7 @@ Per-tool instructions, including plugin installs for Codex, Copilot CLI and Gemi
 | Tool | How | Reads skills from |
 |---|---|---|
 | Claude Code | Plugin marketplace, or `install.mjs` | `.claude/skills/`, `~/.claude/skills/` |
-| Claude (web, desktop) | Upload a skill ZIP from `dist/skills/` | – |
+| Claude (web, desktop) | Run `npm run package`, then upload a skill ZIP from `dist/skills/` | – |
 | OpenAI Codex | `install.mjs`, or the repo marketplace in `.agents/plugins/` | `.agents/skills/`, `~/.agents/skills/` |
 | GitHub Copilot | `install.mjs`, or Copilot CLI plugin marketplace | `.github/skills/`, `.claude/skills/`, `.agents/skills/` |
 | Cursor | `install.mjs` | `.cursor/skills/`, `.agents/skills/` |
@@ -114,6 +124,18 @@ Folder locations checked against each tool's documentation in November 2026.
   submissions are prepared and shown, then applied by a person.
 - **Generated files stay generated:** when a script writes `vercel.json` or a sitemap, the
   assistant changes the script.
+
+## What the skills don't do
+
+Installing them gives your assistant a checklist and the tools to measure. The rest of the work
+is still yours:
+
+- **Content.** Search engines and AI assistants cite pages that answer real questions with facts
+  the business has confirmed. The skills check how pages are built; they don't decide what a page
+  should say.
+- **Links and mentions.** Other sites linking to you, reviews and press are outside a codebase.
+- **Results.** No skill can promise rankings or AI citations. The skills remove the technical
+  reasons a site isn't found, read or cited; content, time and measurement do the rest.
 
 ## Repository layout
 
@@ -144,28 +166,13 @@ or updating a fact.
 
 ## Licence
 
-MIT License
-
-Copyright (c) 2026 Illia Sharabarin
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+[MIT](LICENSE). Use it, change it and ship it in client work; keep the copyright notice.
 
 ## Author
 
-Illia Sharabarin. 
+Made by Illia Sharabarin, product and web designer:
+[illia-sharabarin.com](https://illia-sharabarin.com) ·
+[LinkedIn](https://www.linkedin.com/in/illia-sharabarin/)
+
+Found a wrong fact, a stale price or a better check? Open an issue, or see
+[CONTRIBUTING.md](CONTRIBUTING.md) to send a fix.

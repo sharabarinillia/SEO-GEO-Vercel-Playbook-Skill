@@ -38,13 +38,17 @@ Plugin (all ten skills, updated with `/plugin update`), in Claude Code:
 /plugin install seo-geo-vercel@seo-geo-vercel-skills
 ```
 
-Send them as two separate prompts. Or copy the skills: `install.mjs --tools claude` (project:
+Send them as two separate prompts. `seo-geo-vercel-skills` is the marketplace's name (set in
+`.claude-plugin/marketplace.json`) and `seo-geo-vercel` is the plugin; neither is a repository.
+If the second command says the marketplace isn't found, run the first one again on its own.
+
+Or copy the skills: `install.mjs --tools claude` (project:
 `.claude/skills/`) or `--user --tools claude` (`~/.claude/skills/`). Skills load automatically
 when a task matches their description; you can also ask for one by name.
 
 ## Claude (web and desktop apps)
 
-Run `npm run package`, then upload the skills you want from `dist/skills/` (one ZIP per skill) where
+In the checkout, run `npm run package`, then upload the skills you want from `dist/skills/` (one ZIP per skill) where
 Claude's settings let you add custom skills. Code execution must be enabled for the scripts to run.
 
 ## OpenAI Codex
@@ -73,6 +77,8 @@ Copilot CLI plugin:
 copilot plugin marketplace add sharabarinillia/SEO-GEO-Vercel-Playbook-Skill
 copilot plugin install seo-geo-vercel@seo-geo-vercel-skills
 ```
+
+As in Claude Code, `seo-geo-vercel-skills` is the marketplace and `seo-geo-vercel` the plugin.
 
 ## Cursor
 
@@ -103,6 +109,8 @@ The default install works (`.claude/skills/`); `--tools cline` writes `.cline/sk
 
 ## Kiro
 
+From inside the checkout:
+
 ```bash
 node scripts/install.mjs --project path/to/your-site --tools kiro     # .kiro/skills/
 node scripts/install.mjs --user --tools kiro                          # ~/.kiro/skills/
@@ -118,6 +126,13 @@ skill folder, for example
   others): `install.mjs --agents-md` writes a section listing each skill and when to read it.
 - **Anything else:** give the assistant the relevant `skills/<name>/SKILL.md` as context; it tells
   the assistant which reference file or script to use next.
+
+## Check that it worked
+
+Start a new session in the project and ask: "Which skills do you have for SEO and GEO?" The
+assistant should name the ten skills, starting with `seo-geo-vercel-playbook`. If it doesn't,
+check that the folders exist (for example `.claude/skills/seo-technical-audit/SKILL.md`) and that
+the tool was restarted.
 
 ## Updating
 
